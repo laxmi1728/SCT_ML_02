@@ -28,10 +28,10 @@ Customer behavior analysis
 Project Structure
 customer-segmentation-ml/
 │
-├── Mall_Customers.csv          # Dataset
-├── customer_segmentation.py    # K-Means clustering + visualization
-├── app.py                      # Streamlit web application
-├── README.md                   # Project documentation
+├── Mall_Customers.csv         
+├── customer_segmentation.py    
+├── app.py                      
+├── README.md                  
 
  Dataset Description:
 
