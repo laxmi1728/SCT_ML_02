@@ -1,63 +1,132 @@
-Overview
+Customer Segmentation using K-Means Clustering
 
-This project performs customer segmentation using the K-Means clustering algorithm. The goal is to group customers based on their Annual Income and Spending Score, which can help businesses understand customer behavior and create targeted marketing strategies.
+This project demonstrates customer segmentation using the K-Means clustering algorithm on the popular Mall Customers dataset.
+It helps businesses understand customer behavior based on Annual Income and Spending Score, and visually explore different customer groups.
 
-Dataset
+The project includes:
 
-The dataset used is Mall_Customers.csv (or your dataset name), which contains:
+A machine learning script for clustering and visualization
 
-Column	Description
-CustomerID	Unique ID for each customer
-Gender	Customer gender (Male/Female)
-Age	Age of the customer
-Annual Income (k$)	Customer income in thousand dollars
-Spending Score (1-100)	Score assigned by the mall based on customer behavior
-Steps in the Project
+An interactive Streamlit web app for real-time exploration
 
-Import libraries: pandas, numpy, matplotlib, sklearn
+ Project Overview:
 
-Load dataset into a DataFrame
+Customer segmentation is a key application of unsupervised machine learning.
+In this project, customers are grouped into clusters based on:
 
-Select features (Annual Income, Spending Score)
+Annual Income (k$)
 
-Apply K-Means clustering with n_clusters=5
+Spending Score (1–100)
 
-Visualize clusters using a scatter plot
+The K-Means algorithm is used to identify meaningful customer segments that can help in:
 
-Analyze clusters to understand different customer segments
+Targeted marketing
 
-Cluster Insights
+Business strategy planning
 
-Cluster 1 → “Big Spenders” (high income, high spending)
+Customer behavior analysis
+Project Structure
+customer-segmentation-ml/
+│
+├── Mall_Customers.csv          # Dataset
+├── customer_segmentation.py    # K-Means clustering + visualization
+├── app.py                      # Streamlit web application
+├── README.md                   # Project documentation
 
-Cluster 2 → “Careful Savers” (high income, low spending)
+ Dataset Description:
 
-Cluster 3 → “Moderate Customers” (middle income and spending)
+File: Mall_Customers.csv
 
-Cluster 4 → “Bargain Hunters” (low income, high spending)
+Column Name	Description
+CustomerID	Unique customer identifier
+Gender	Customer gender
+Age	Customer age
+Annual Income (k$)	Annual income in thousands
+Spending Score (1-100)	Spending behavior score
 
-Cluster 5 → “Low Value Customers” (low income, low spending)
+ Technologies Used:
 
-(You can adjust these labels based on your own analysis.)
+Python
 
-How to Run
+Pandas – Data handling
+
+Matplotlib – Data visualization
+
+Scikit-learn – K-Means clustering
+
+Streamlit – Web application
+
+Machine Learning Approach:
+
+Load and explore the dataset
+
+Select relevant features:
+
+Annual Income
+
+Spending Score
+
+Use the Elbow Method to determine optimal clusters
+
+Apply K-Means clustering
+
+Visualize customer segments and centroids
+
+ How to Run the Project:
+ 
+-> Clone the Repository
+git clone https://github.com/your-username/customer-segmentation-ml.git
+cd customer-segmentation-ml
+
+-> Install Required Libraries
+pip install pandas matplotlib scikit-learn streamlit
+
+->Run the ML Script (Optional)
+python customer_segmentation.py
 
 
-Install dependencies:
+This will:
 
-pip install -r requirements.txt
+Apply K-Means clustering
+
+Display elbow method and cluster visualization
+
+4️ Run the Streamlit App:
+streamlit run app.py
 
 
-Run the script:
+📌 Upload Mall_Customers.csv when prompted in the app.
 
-python kmeans_customer_segmentation.py
+ Streamlit App Features:
 
-Libraries Used
+CSV file upload
 
-pandas – data manipulation
+Interactive cluster selection (slider)
 
-numpy – numerical operations
+Dataset preview
 
-matplotlib – data visualization
+Cluster-wise summary statistics
 
-scikit-learn – machine learning (K-Means algorithm)
+Real-time visualization of customer segments
+
+Cluster centroids display
+
+Output Visualization:
+
+Scatter plot of customer clusters
+
+Each cluster shown in a different color
+
+Centroids marked clearly
+
+Easy interpretation of customer groups
+
+ Use Cases:
+
+Market segmentation
+
+Personalized marketing strategies
+
+Business decision support
+
+Beginner-friendly ML project for portfolios
